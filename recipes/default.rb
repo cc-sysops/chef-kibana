@@ -68,6 +68,7 @@ case  node['kibana']['install_type']
           path node['kibana']['install_path']
           checksum  node['kibana']['file']['checksum']
           owner kibana_user
+          group kibana_user
           action :put
         end
         node.set['kibana']['web_dir'] = node['kibana']['install_dir']
